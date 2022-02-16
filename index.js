@@ -31,17 +31,17 @@ function password1() {
         password += keyToAdd()
         passwordValue1.value = password
     }
-    return password;
+   
 }
 function password2() {
-    letpasswordValue2 = document.getElementById("password2")
+    let passwordValue2 = document.getElementById("password2")
     let password = ""
     for (let i = 0; i < 12; i++) {
         let keyToAdd = getKey[Math.floor(Math.random() * getKey.length)];
         password += keyToAdd()
         passwordValue2.value = password
     }
-    return password;
+    
 }
 function password3() {
     let passwordValue3 = document.getElementById("password3")
@@ -51,7 +51,7 @@ function password3() {
         password += keyToAdd()
         passwordValue3.value = password
     }
-    return password;
+   
 }
 function password4() {
     let passwordValue4 = document.getElementById("password4")
@@ -61,7 +61,7 @@ function password4() {
         password += keyToAdd()
         passwordValue4.value = password
     }
-    return password;
+    
 }
 function generatePassword() {
     let input = document.getElementById("input-el")
@@ -73,3 +73,6 @@ function generatePassword() {
     password4() 
 }
 btn.addEventListener("click", generatePassword)
+btn.addEventListener("click", password2)
+btn.addEventListener("click", password3)
+btn.addEventListener("click", password4)
